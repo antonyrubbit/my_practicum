@@ -1141,7 +1141,7 @@ private:
 
 // Точка входа
 int main(int /*argc*/, char* /*argv*/[]) {
-    setlocale(LC_ALL, "ru_RU.UTF-8");
+    setlocale(LC_ALL, "Russian");
     std::srand((unsigned int)std::time(nullptr));
     Game game;
     if (!game.init()) return 1;
