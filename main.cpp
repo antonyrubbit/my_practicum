@@ -1141,7 +1141,11 @@ private:
 
 // Точка входа
 int main(int /*argc*/, char* /*argv*/[]) {
+#ifdef _WIN32
     setlocale(LC_ALL, "Russian");
+#else
+    setlocale(LC_ALL, "C.UTF-8");
+#endif
     std::srand((unsigned int)std::time(nullptr));
     Game game;
     if (!game.init()) return 1;
